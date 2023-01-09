@@ -5,7 +5,7 @@ const Balance = () => {
   const {state, dispatch}  = useContext(StateContext)
 
   const amounts = state.transactions.map(transaction => transaction.amount);
-  const total_amount = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2)
+  const total_amount = Math.abs(amounts.reduce((acc, item) => (acc += item), 0)).toFixed(2)
 
 
   return (

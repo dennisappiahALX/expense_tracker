@@ -9,7 +9,10 @@ type InitialStateType  = {
 }
 
 const initialState= {
-  transactions: [],
+  transactions: [{id:1, text: "Cash", amount:90},
+  {id:2, text: "Payment", amount:290},
+  {id:3, text: "Invoice", amount:-390},
+  {id:4, text: "Bus", amount:-50}],
 }
 
 export const StateContext = createContext 
