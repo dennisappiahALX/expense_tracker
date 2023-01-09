@@ -10,6 +10,8 @@ const NewTransaction:React.FC = () => {
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if(!text) return;
+    if (!amount) return;
     dispatch({
       type: Types.Add,
       payload: {
